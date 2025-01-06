@@ -1,0 +1,414 @@
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  padding-bottom: 60px; /* Espacio para el pie de página fijo */
+}
+/* Estilo para el scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra */
+}
+
+/* Fondo de la barra */
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Color del fondo */
+  border-radius: 6px;
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: #e73737; /* Color del scrollbar */
+  border-radius: 6px;
+}
+/* Cambiar el color del scrollbar en Firefox */
+body {
+  scrollbar-color: #4caf50 #e0e0e0; /* Color del scrollbar y el fondo */
+  scrollbar-width: thin; /* Ancho del scrollbar: puede ser auto, thin o none */
+}
+
+/* Hover sobre la barra 
+::-webkit-scrollbar-thumb:hover {
+  background: #202020; /* Color al pasar el cursor */
+
+/* Estilos del encabezado */
+header {
+  background-color: #ffffff;
+  padding: 20px 50px; /* Espaciado superior e inferior, 50px a los lados */
+  display: flex;
+  justify-content: space-between; /* Para colocar la logo y el menú a los lados */
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+header .logo img {
+  width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+  max-width: 270px; /* Ancho máximo para que no crezca más allá de 270px */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+nav {
+  flex-grow: 1; /* Asegura que el nav ocupe el espacio restante */
+  display: flex;
+  justify-content: center; /* Centra el menú horizontalmente */
+  text-align: center;
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover; /* Hace que la imagen cubra todo el área */
+  background-position: center center; /* Centra la imagen */
+  background-color: #333;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 30px; /* Separación entre los elementos del menú */
+  position: relative; /* Necesario para el submenú */
+}
+
+header nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  display: block;
+}
+
+header nav ul li a:hover {
+  background-color: #e73737; /* Cambia el fondo al pasar el ratón por encima */
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+/* Estilo para la flecha */
+header nav ul li .arrow {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Efecto de hover en el enlace de Productos */
+header nav ul li.productos a:hover .arrow {
+  transform: rotate(
+    180deg
+  ); /* Rota la flecha para indicar que hay un submenú */
+  transition: transform 0.3s ease;
+}
+.imagePrincipal {
+  height: 450px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+/* Estilos del submenú */
+.submenu {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 100%; /* Justo debajo del enlace "Productos" */
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  border-radius: 10px;
+  width: 500px; /* Ancho del submenú */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra para darle un efecto flotante */
+  z-index: 10; /* Asegura que se muestre encima de otros elementos */
+}
+
+/* Estilo de los elementos dentro del submenú */
+.submenu li {
+  border-bottom: 1px solid #555;
+}
+
+.submenu li:last-child {
+  border-bottom: none;
+}
+
+.submenu a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #e73737;
+}
+
+/* Mostrar el submenú al pasar el ratón sobre "Productos" */
+.productos:hover .submenu {
+  display: block; /* Mostrar submenú */
+}
+
+/* Para dispositivos táctiles: Mostrar submenú al hacer click */
+.productos:active .submenu {
+  display: block;
+}
+/* Estilos para la sección de ubicación */
+.ubicacion {
+  padding: 20px;
+  text-align: center;
+}
+
+.ubicacion iframe {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  max-width: 600px; /* Ancho máximo para mantener la calidad del mapa */
+  height: 350px; /* Altura fija del mapa */
+  border: 0;
+  border-radius: 20px;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .ubicacion iframe {
+    height: 250px; /* Ajusta la altura del mapa para pantallas pequeñas */
+  }
+}
+
+header .logo img {
+  max-width: 350px; /* Aumentamos el tamaño máximo en pantallas pequeñas */
+}
+/* Estilos del pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+/* Estilos para la div del catálogo */
+.catalogo {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: 300;
+  width: 90px; /* Fijamos un ancho constante */
+  white-space: normal; /* Permite que el texto se ajuste a varias líneas */
+  word-wrap: break-word; /* Corta palabras largas si es necesario */
+}
+
+.catalogo p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.catalogo:hover {
+  background-color: #e73737;
+  cursor: pointer;
+}
+
+/* Estilos para el botón flotante de WhatsApp debajo del catálogo */
+.whatsapp-btn-container {
+  position: fixed;
+  top: 60%; /* Colocamos el botón debajo del catálogo con una separación de 20px */
+  right: 20px;
+  transform: translateY(
+    50%
+  ); /* Ajusta para que se coloque correctamente debajo */
+  z-index: 1000;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25d366;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #e73737;
+  color: #ffffff;
+}
+
+.whatsapp-btn i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+/* Estilos para el formulario */
+.formulario {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #e73737;
+  outline: none;
+}
+
+.formulario button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e73737;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #d02a2a;
+}
+/* Pantallas pequeñas (móviles, <768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  header .logo img {
+    width: 180px;
+    height: auto;
+  }
+
+  nav {
+    margin-top: 0;
+    flex-grow: 0;
+    width: 100%;
+  }
+
+  header nav ul {
+    flex-direction: column; /* El menú se coloca en columna */
+  }
+
+  nav ul li {
+    margin-right: 0;
+    width: 100%;
+  }
+  .ubicacion iframe {
+    height: 250px; /* Ajusta la altura del mapa para pantallas pequeñas */
+  }
+  .submenu {
+    position: static; /* Cambia a estático en pantallas pequeñas */
+    width: 100%; /* El submenú ocupa el 100% de ancho */
+    box-shadow: none; /* Elimina la sombra */
+  }
+
+  .submenu li {
+    width: 100%; /* Ocupa todo el ancho */
+  }
+
+  .submenu a {
+    padding: 10px; /* Agrega padding para mayor espacio */
+    font-size: 14px; /* Ajusta el tamaño de texto para móviles */
+  }
+  nav ul li a {
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .catalogo {
+    font-size: 12px; /* Reducimos un poco el texto */
+    width: 80px; /* Ajustamos el ancho para móviles */
+    padding: 8px; /* Reducimos el padding */
+  }
+
+  .whatsapp-btn {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 30px;
+  }
+
+  .whatsapp-btn i {
+    font-size: 18px;
+  }
+
+  .formulario {
+    width: 95%;
+    padding: 15px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Pantallas medianas (tablets, 768px - 1024px) */
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  header .logo img {
+    width: 220px;
+    height: auto;
+  }
+
+  nav ul {
+    justify-content: space-around;
+  }
+
+  .formulario {
+    width: 90%;
+    padding: 20px;
+  }
+}
