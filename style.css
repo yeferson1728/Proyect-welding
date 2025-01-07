@@ -169,6 +169,7 @@ header nav ul li.productos a:hover .arrow {
   height: 350px; /* Altura fija del mapa */
   border: 0;
   border-radius: 20px;
+  margin-bottom: 5%;
 }
 
 /* Para pantallas pequeñas */
@@ -191,6 +192,13 @@ footer {
   bottom: 0;
   width: 100%;
   left: 0;
+}
+article{
+  margin-bottom: 5%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  letter-spacing: 1px;
 }
 
 /* Estilos para la div del catálogo */
