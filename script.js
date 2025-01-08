@@ -9,7 +9,7 @@
 // // }
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -57,7 +57,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -76,7 +76,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -95,7 +95,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -114,7 +114,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -133,7 +133,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -152,7 +152,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -171,7 +171,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -196,7 +196,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -221,7 +221,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -246,7 +246,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -267,11 +267,11 @@
 //     }
 
 //     if (!/^\d{10}$/.test(celular)) {
-//         responseMessage.textContent = 'El número de 
+//         responseMessage.textContent = 'El número de
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -292,11 +292,11 @@
 //     }
 
 //     if (!/^\d{10}$/.test(celular)) {
-//         responseMessage.textContent = 'El número 
+//         responseMessage.textContent = 'El número
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -321,7 +321,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -347,7 +347,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -373,7 +373,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -401,11 +401,11 @@
 
 //     // Simular el envío del formulario (puedes sustituirlo con una llamada a un servidor)
 //     setTimeout(() => {
-//         responseMessage.textContent = '¡Formulario enviado exitosamente! Nos pondremos en 
+//         responseMessage.textContent = '¡Formulario enviado exitosamente! Nos pondremos en
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -437,7 +437,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -465,11 +465,11 @@
 
 //     // Simular el envío del formulario (puedes sustituirlo con una llamada a un servidor)
 //     setTimeout(() => {
-//         responseMessage.textContent = '¡Formulario enviado exitosamente! Nos 
+//         responseMessage.textContent = '¡Formulario enviado exitosamente! Nos
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -501,7 +501,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -533,7 +533,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -561,11 +561,11 @@
 
 //     // Simular el envío del formulario (puedes sustituirlo con una llamada a un servidor)
 //     setTimeout(() => {
-//         responseMessage.textContent = '¡Formulario 
+//         responseMessage.textContent = '¡Formulario
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -597,7 +597,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -630,7 +630,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -666,7 +666,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
@@ -702,7 +702,7 @@
 
 // document.getElementById('contactForm').addEventListener('submit', function(event) {
 //     event.preventDefault(); // Evita que se recargue la página
-    
+
 //     // Limpia mensajes anteriores
 //     const responseMessage = document.getElementById('responseMessage');
 //     responseMessage.textContent = '';
