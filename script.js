@@ -1,3 +1,38 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const productosLink = document.querySelector(".productos > a");
+  const submenu = document.querySelector(".productos .submenu");
+
+  // Al hacer clic en el enlace de "Productos"
+  productosLink.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevenimos que se siga el enlace (si tiene uno)
+
+    // Alterna la clase 'active' para mostrar u ocultar el submenú
+    submenu.classList.toggle("active");
+  });
+
+  // Opcional: Si deseas que al hacer clic fuera del submenú este se cierre
+  document.addEventListener("click", function (e) {
+    // Verifica si el clic no fue dentro del menú de productos
+    if (!productosLink.contains(e.target) && !submenu.contains(e.target)) {
+      submenu.classList.remove("active"); // Cierra el submenú si se hace clic fuera
+    }
+  });
+});
+// Esperar a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("header nav ul");
+
+  // Añadir el evento click al botón hamburguesa
+  menuToggle.addEventListener("click", function () {
+    // Alternar la clase 'active' en el menú para mostrar/ocultar
+    navMenu.classList.toggle("active");
+
+    // Alternar la clase 'active' en el botón hamburguesa
+    menuToggle.classList.toggle("active");
+  });
+});
+
 // // // Función para alternar la clase 'active' en el menú
 // // function toggleMenu() {
 // //   const navLinks = document.querySelector("nav ul");

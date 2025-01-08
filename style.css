@@ -12,6 +12,7 @@ body {
   color: #333;
   padding-bottom: 60px; /* Espacio para el pie de página fijo */
 }
+
 /* Estilo para el scrollbar */
 ::-webkit-scrollbar {
   width: 12px; /* Ancho de la barra */
@@ -28,15 +29,12 @@ body {
   background: #e73737; /* Color del scrollbar */
   border-radius: 6px;
 }
+
 /* Cambiar el color del scrollbar en Firefox */
 body {
   scrollbar-color: #4caf50 #e0e0e0; /* Color del scrollbar y el fondo */
   scrollbar-width: thin; /* Ancho del scrollbar: puede ser auto, thin o none */
 }
-
-/* Hover sobre la barra 
-::-webkit-scrollbar-thumb:hover {
-  background: #202020; /* Color al pasar el cursor */
 
 /* Estilos del encabezado */
 header {
@@ -50,9 +48,26 @@ header {
 }
 
 header .logo img {
-  width: 100%; /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
   max-width: 270px; /* Ancho máximo para que no crezca más allá de 270px */
   height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos para la imagen principal en pantallas pequeñas */
+@media (max-width: 768px) {
+  .imagePrincipal {
+    width: 100% !important; /* Asegura que la imagen ocupe el 100% del ancho */
+    height: auto !important; /* Mantiene la proporción */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Aumenta el ancho del article en pantallas pequeñas */
+  article {
+    width: 90% !important; /* Aumenta el ancho a 90% en dispositivos pequeños */
+    margin-left: 5% !important; /* Márgenes pequeños a los lados */
+    margin-right: 5% !important; /* Márgenes pequeños a los lados */
+  }
 }
 
 nav {
@@ -65,6 +80,7 @@ nav {
   background-position: center center; /* Centra la imagen */
   background-color: #333;
 }
+
 header nav ul {
   list-style: none;
   display: flex;
@@ -102,6 +118,7 @@ header nav ul li.productos a:hover .arrow {
   ); /* Rota la flecha para indicar que hay un submenú */
   transition: transform 0.3s ease;
 }
+
 .imagePrincipal {
   height: 450px;
   width: 60%;
@@ -147,29 +164,87 @@ header nav ul li.productos a:hover .arrow {
 .submenu a:hover {
   background-color: #e73737;
 }
-
-/* Mostrar el submenú al pasar el ratón sobre "Productos" */
-.productos:hover .submenu {
-  display: block; /* Mostrar submenú */
-}
-
-/* Para dispositivos táctiles: Mostrar submenú al hacer click */
-.productos:active .submenu {
-  display: block;
-}
-/* Estilos para la sección de ubicación */
 .ubicacion {
-  padding: 20px;
+  border-radius: 15px;
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+/* Mostrar el submenú al pasar el ratón sobre "Productos" (ESCRITORIO) */
+@media (min-width: 769px) {
+  .productos:hover .submenu {
+    display: block; /* Mostrar submenú solo al hacer hover */
+  }
+
+  article {
+    width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+    margin-left: 5%; /* Márgenes pequeños a los lados */
+    margin-right: 5%;
+    margin-top: 10px; /* Reduce el margen superior */
+    margin-bottom: 10px; /* Reduce el margen inferior */
+  }
 }
 
-.ubicacion iframe {
-  width: 100%; /* Ajusta el ancho al 100% del contenedor */
-  max-width: 600px; /* Ancho máximo para mantener la calidad del mapa */
-  height: 350px; /* Altura fija del mapa */
-  border: 0;
-  border-radius: 20px;
-  margin-bottom: 5%;
+/* Submenú en dispositivos móviles (por debajo de 768px) */
+@media (max-width: 768px) {
+  .submenu {
+    display: none; /* El submenú está oculto por defecto */
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .submenu.active {
+    display: block; /* Muestra el submenú cuando tiene la clase 'active' */
+  }
+
+  .submenu li {
+    width: 100%;
+  }
+
+  .submenu a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  header nav ul {
+    display: none; /* Oculta el menú por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Justo debajo de la barra de navegación */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 10;
+  }
+
+  header nav ul.active {
+    display: flex; /* Muestra el menú cuando la clase 'active' está aplicada */
+  }
+
+  header nav ul li {
+    width: 100%; /* Hace que cada ítem ocupe todo el ancho */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 20px;
+  }
+
+  header nav ul li a {
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    padding: 15px; /* Añade más espacio para que sea más fácil de tocar */
+  }
+
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: block; /* Muestra el botón hamburguesa */
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;
+    z-index: 20;
+  }
+
+  .menu-toggle.active i {
+    color: #e73737; /* Cambia el color cuando está activo */
+  }
 }
 
 /* Para pantallas pequeñas */
@@ -177,12 +252,19 @@ header nav ul li.productos a:hover .arrow {
   .ubicacion iframe {
     height: 250px; /* Ajusta la altura del mapa para pantallas pequeñas */
   }
+
+  article {
+    width: 90% !important; /* Aumenta el ancho a 90% para hacerlo más grande */
+    margin-left: 5% !important; /* Márgenes pequeños a los lados */
+    margin-right: 5% !important; /* Márgenes pequeños a los lados */
+  }
 }
 
 header .logo img {
   max-width: 350px; /* Aumentamos el tamaño máximo en pantallas pequeñas */
 }
-/* Estilos del pie de página */
+
+/* Estilos para el pie de página */
 footer {
   background-color: #333;
   color: white;
@@ -193,6 +275,8 @@ footer {
   width: 100%;
   left: 0;
 }
+
+/* Estilos dentro de article */
 article {
   margin-bottom: 5%;
   width: 40%;
@@ -201,6 +285,34 @@ article {
   letter-spacing: 1px;
   background-color: #f9f9f9;
   padding: 20px;
+}
+
+/* Separación para los encabezados */
+article h1 {
+  margin-bottom: 20px; /* Separación abajo del h1 */
+  font-size: 2.5rem; /* Tamaño grande para el h1 */
+  color: #e73737;
+  line-height: 1.2;
+}
+
+article h2 {
+  margin-bottom: 15px; /* Separación abajo del h2 */
+  font-size: 2rem; /* Tamaño medio para el h2 */
+  color: #e73737;
+  line-height: 1.3;
+}
+
+/* Separación para los párrafos */
+article p {
+  margin-bottom: 20px; /* Separación abajo del párrafo */
+  font-size: 1rem; /* Tamaño de fuente normal para los párrafos */
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Ajuste de márgenes para el último párrafo */
+article p:last-child {
+  margin-bottom: 0; /* El último párrafo no tiene margen inferior */
 }
 
 /* Estilos para la div del catálogo */
@@ -213,7 +325,7 @@ article {
   color: white;
   padding: 10px;
   border-radius: 2px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
   text-align: center;
   font-size: 14px;
@@ -268,6 +380,7 @@ article {
   font-size: 20px;
   margin-right: 10px;
 }
+
 /* Estilos para el formulario */
 .formulario {
   width: 80%;
@@ -312,113 +425,18 @@ article {
 }
 
 .formulario button {
+  display: block;
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   background-color: #e73737;
-  color: white;
-  font-size: 18px;
   border: none;
   border-radius: 5px;
+  color: white;
+  font-size: 18px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .formulario button:hover {
-  background-color: #d02a2a;
-}
-/* Pantallas pequeñas (móviles, <768px) */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
-
-  header .logo img {
-    width: 180px;
-    height: auto;
-  }
-
-  nav {
-    margin-top: 0;
-    flex-grow: 0;
-    width: 100%;
-  }
-
-  header nav ul {
-    flex-direction: column; /* El menú se coloca en columna */
-  }
-
-  nav ul li {
-    margin-right: 0;
-    width: 100%;
-  }
-  .ubicacion iframe {
-    height: 250px; /* Ajusta la altura del mapa para pantallas pequeñas */
-  }
-  .submenu {
-    position: static; /* Cambia a estático en pantallas pequeñas */
-    width: 100%; /* El submenú ocupa el 100% de ancho */
-    box-shadow: none; /* Elimina la sombra */
-  }
-
-  .submenu li {
-    width: 100%; /* Ocupa todo el ancho */
-  }
-
-  .submenu a {
-    padding: 10px; /* Agrega padding para mayor espacio */
-    font-size: 14px; /* Ajusta el tamaño de texto para móviles */
-  }
-  nav ul li a {
-    padding: 10px;
-    font-size: 16px;
-    text-align: left;
-  }
-
-  .catalogo {
-    font-size: 12px; /* Reducimos un poco el texto */
-    width: 80px; /* Ajustamos el ancho para móviles */
-    padding: 8px; /* Reducimos el padding */
-  }
-
-  .whatsapp-btn {
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 30px;
-  }
-
-  .whatsapp-btn i {
-    font-size: 18px;
-  }
-
-  .formulario {
-    width: 95%;
-    padding: 15px;
-  }
-
-  iframe {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Pantallas medianas (tablets, 768px - 1024px) */
-@media (max-width: 1024px) {
-  header {
-    padding: 15px 30px;
-  }
-
-  header .logo img {
-    width: 220px;
-    height: auto;
-  }
-
-  nav ul {
-    justify-content: space-around;
-  }
-
-  .formulario {
-    width: 90%;
-    padding: 20px;
-  }
+  background-color: #333;
 }
