@@ -321,7 +321,7 @@ article p:last-child {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  background-color: #333;
+
   color: white;
   padding: 10px;
   border-radius: 2px;
@@ -329,32 +329,26 @@ article p:last-child {
   z-index: 100;
   text-align: center;
   font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-weight: 300;
-  width: 90px; /* Fijamos un ancho constante */
-  white-space: normal; /* Permite que el texto se ajuste a varias líneas */
-  word-wrap: break-word; /* Corta palabras largas si es necesario */
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .catalogo p {
   margin: 0;
   line-height: 1.2;
 }
-
-.catalogo:hover {
-  background-color: #e73737;
-  cursor: pointer;
+.catalogo i {
+  margin-right: 10px;
 }
 
 /* Estilos para el botón flotante de WhatsApp debajo del catálogo */
 .whatsapp-btn-container {
   position: fixed;
-  top: 60%; /* Colocamos el botón debajo del catálogo con una separación de 20px */
+  top: 60%;
   right: 20px;
-  transform: translateY(
-    50%
-  ); /* Ajusta para que se coloque correctamente debajo */
+  transform: translateY(50%);
   z-index: 1000;
 }
 
@@ -371,13 +365,43 @@ article p:last-child {
   transition: background-color 0.3s;
 }
 
-.whatsapp-btn:hover {
-  background-color: #e73737;
-  color: #ffffff;
-}
-
 .whatsapp-btn i {
   font-size: 20px;
+  margin-right: 10px;
+}
+/* Estilo para los botones */
+.llamada-btn-container {
+  position: fixed;
+  top: 53%;
+  right: 20px;
+  transform: translateY(50%);
+  z-index: 1000;
+}
+
+.llamada-btn,
+.whatsapp-btn,
+.catalogo {
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.llamada-btn:hover,
+.whatsapp-btn:hover,
+.catalogo:hover {
+  background-color: #128c7e; /* Color más oscuro para hover */
+}
+
+.llamada-btn i,
+.whatsapp-btn i {
   margin-right: 10px;
 }
 
