@@ -320,8 +320,6 @@ article p:last-child {
   position: fixed;
   top: 50%;
   right: 20px;
-  transform: translateY(-50%);
-
   color: white;
   padding: 10px;
   border-radius: 2px;
@@ -346,10 +344,9 @@ article p:last-child {
 /* Estilos para el botón flotante de WhatsApp debajo del catálogo */
 .whatsapp-btn-container {
   position: fixed;
-  top: 60%;
+  top: 70%;
   right: 20px;
-  transform: translateY(50%);
-  z-index: 1000;
+  
 }
 
 .whatsapp-btn {
@@ -372,10 +369,8 @@ article p:last-child {
 /* Estilo para los botones */
 .llamada-btn-container {
   position: fixed;
-  top: 53%;
+  top: 60%;
   right: 20px;
-  transform: translateY(50%);
-  z-index: 1000;
 }
 
 .llamada-btn,
